@@ -51,9 +51,9 @@ app.post('/create-preference', async (req, res) => {
                 }
             ],
             back_urls: {
-                success: `${FRONTEND_URL}/#/payment/success?token=${paymentToken}`,
-                failure: `${FRONTEND_URL}/#/payment/failure?token=${paymentToken}`,
-                pending: `${FRONTEND_URL}/#/payment/pending?token=${paymentToken}`
+                success: `${FRONTEND_URL}/payment/success?token=${paymentToken}`,
+                failure: `${FRONTEND_URL}/payment/failure?token=${paymentToken}`,
+                pending: `${FRONTEND_URL}/payment/pending?token=${paymentToken}`
             },
             auto_return: "approved",
             binary_mode: true,
