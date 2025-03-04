@@ -4,7 +4,13 @@ const { MercadoPagoConfig, Preference } = require('mercadopago');
 const crypto = require('crypto');
 
 const app = express();
-app.use(cors());
+
+// Configuración de CORS para permitir peticiones desde tu app
+app.use(cors({
+    origin: ['https://rhinofit-21a4a.web.app', 'http://localhost:5173'],
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 app.use(express.json());
 
 // Configuración de entorno
